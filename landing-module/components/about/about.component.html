@@ -1,0 +1,139 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Main Content -->
+<main class="about-page">
+  
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="section-container">
+      <h1 class="page-title">אודות {{ brandName }}</h1>
+      <p class="page-subtitle">
+        המערכת החכמה שמשנה את הדרך שבה זוגות מתכננים את האירוע שלהם
+      </p>
+    </div>
+  </section>
+  
+  <!-- Story Section -->
+  <section class="story-section">
+    <div class="section-container">
+      <div class="story-grid">
+        <div class="story-content">
+          <h2 class="section-title">הסיפור שלנו</h2>
+          <div class="story-text">
+            <p>
+              <strong>{{ brandName }}</strong> (מבוטא "{{ pronunciation }}") נוצרה מתוך צורך אמיתי. 
+              כשתכננו את החתונה שלנו, גילינו שהתהליך של איסוף אישורי הגעה וסידור הושבה 
+              הוא מלחיץ, גוזל זמן ומלא בטעויות.
+            </p>
+            <p>
+              חשבנו לעצמנו: "בעידן של בינה מלאכותית ואוטומציה, למה שזה יהיה כל כך קשה?"
+            </p>
+            <p>
+              כך נולדה {{ brandName }} - מערכת שמשלבת טכנולוגיה חכמה עם הבנה עמוקה של 
+              הצרכים של זוגות מתחתנים. אנחנו לא רק פותרים בעיות טכניות - אנחנו עוזרים 
+              לזוגות להתמקד במה שבאמת חשוב: החוויה והשמחה.
+            </p>
+          </div>
+        </div>
+        
+        <div class="story-image">
+          <div class="image-placeholder">
+            <span class="placeholder-icon">💍</span>
+            <span class="placeholder-icon">🤖</span>
+            <span class="placeholder-icon">❤️</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="section-container">
+      <h2 class="section-title">הערכים שלנו</h2>
+      <div class="values-grid">
+        <div *ngFor="let value of values" class="value-card">
+          <div class="value-icon">{{ value.icon }}</div>
+          <h3 class="value-title">{{ value.title }}</h3>
+          <p class="value-description">{{ value.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Mission Section -->
+  <section class="mission-section">
+    <div class="section-container">
+      <div class="mission-box">
+        <h2 class="mission-title">המשימה שלנו</h2>
+        <p class="mission-text">
+          להפוך את תכנון האירוע לחוויה פשוטה, נעימה ויעילה עבור כל זוג. 
+          אנחנו מאמינים שטכנולוגיה צריכה לשרת אנשים, לא להסבך אותם.
+        </p>
+        <p class="mission-text">
+          כל תכונה ב-{{ brandName }} נבנתה מתוך הבנה של הצרכים האמיתיים שלכם, 
+          והמטרה שלנו היא לחסוך לכם זמן, כסף ומתח.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Timeline Section -->
+  <section class="timeline-section">
+    <div class="section-container">
+      <h2 class="section-title">הדרך שלנו</h2>
+      <div class="timeline">
+        <div *ngFor="let milestone of milestones" class="timeline-item">
+          <div class="timeline-year">{{ milestone.year }}</div>
+          <div class="timeline-content">
+            <p class="timeline-event">{{ milestone.event }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Legal Section -->
+  <section class="legal-section">
+    <div class="section-container">
+      <div class="legal-box">
+        <h2 class="section-title">פרטים משפטיים</h2>
+        <div class="legal-info">
+          <div class="legal-item">
+            <strong>שם המותג:</strong> {{ brandName }} ({{ pronunciation }})
+          </div>
+          <div class="legal-item">
+            <strong>מופעל על ידי:</strong> {{ legalEntity }}
+          </div>
+          <div class="legal-item">
+            <strong>מספר עוסק מורשה:</strong> {{ licenseNumber }}
+          </div>
+          <div class="legal-item">
+            <strong>דומיין:</strong> eivi.co.il
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="section-container">
+      <div class="cta-box">
+        <h2 class="cta-title">רוצים להצטרף למשפחת Eivi?</h2>
+        <p class="cta-text">
+          הצטרפו לאלפי זוגות מרוצים שכבר חוסכים זמן ומתח
+        </p>
+        <button class="btn-primary btn-large" type="button">
+          התחילו עכשיו
+          <span class="btn-arrow">←</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+</main>
+
+<!-- Footer -->
+<app-footer></app-footer>

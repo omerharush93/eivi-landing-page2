@@ -1,0 +1,258 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Main Content -->
+<main class="landing-home">
+  
+  <!-- ========================================
+       SECTION 1: HERO
+       ======================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">✨</span>
+          <span class="badge-text">בינה מלאכותית לניהול אירועים</span>
+        </div>
+        
+        <h1 class="hero-title">
+          {{ heroTitle }}
+        </h1>
+        
+        <p class="hero-subtitle">
+          {{ heroSubtitle }}
+        </p>
+        
+        <div class="hero-cta">
+          <button class="btn-primary" type="button" (click)="onCtaClick()">
+            {{ heroCta }}
+            <span class="btn-arrow">←</span>
+          </button>
+          <button class="btn-secondary" type="button" (click)="scrollToSection('how-it-works')">
+            איך זה עובד?
+          </button>
+        </div>
+        
+        <div class="hero-social-proof">
+          <div class="proof-item">
+            <span class="proof-icon">💍</span>
+            <span class="proof-text"><strong>500+</strong> זוגות מאושרים</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-icon">⭐</span>
+            <span class="proof-text"><strong>4.9/5</strong> דירוג ממוצע</span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-icon">📱</span>
+            <span class="proof-text"><strong>10,000+</strong> אישורי הגעה</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <div class="hero-image-placeholder">
+          <div class="image-decoration">
+            <span class="decoration-icon">💐</span>
+            <span class="decoration-icon">💒</span>
+            <span class="decoration-icon">🎊</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========================================
+       SECTION 2: PAIN POINT
+       ======================================== -->
+  <section class="pain-section" id="pain">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">מכירים את התחושה?</h2>
+        <p class="section-subtitle">
+          תכנון חתונה יכול להיות מלחיץ, במיוחד כשמדובר באישורי הגעה וסידורי הושבה
+        </p>
+      </div>
+      
+      <div class="pain-grid">
+        <div *ngFor="let pain of painPoints" class="pain-card">
+          <div class="pain-icon">😰</div>
+          <p class="pain-text">{{ pain }}</p>
+        </div>
+      </div>
+      
+      <div class="pain-conclusion">
+        <p class="conclusion-text">
+          <strong>הפתרון?</strong> תנו ל-Eivi לטפל בזה בשבילכם!
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========================================
+       SECTION 3: SOLUTION / MAIN FEATURES
+       ======================================== -->
+  <section class="features-section" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">איך Eivi פותרת את הבעיה?</h2>
+        <p class="section-subtitle">
+          שלוש יכולות מרכזיות שיחסכו לכם שעות של עבודה ולחץ
+        </p>
+      </div>
+      
+      <div class="features-grid">
+        <div *ngFor="let feature of mainFeatures" class="feature-card">
+          <div class="feature-icon">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========================================
+       SECTION 3.5: EXTENDED SYSTEM FEATURES
+       ======================================== -->
+  <section class="system-features-section" id="system-features">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">הפונקציונליות המלאה של המערכת</h2>
+        <p class="section-subtitle">
+          כלים מקצועיים לניהול מושלם של האירוע שלכם
+        </p>
+      </div>
+      
+      <div class="system-grid">
+        <div *ngFor="let system of systemFeatures" class="system-card">
+          <div class="system-header">
+            <div class="system-icon">{{ system.icon }}</div>
+            <div class="system-title-group">
+              <h3 class="system-title">{{ system.title }}</h3>
+              <p class="system-subtitle">{{ system.subtitle }}</p>
+            </div>
+          </div>
+          <ul class="system-features-list">
+            <li *ngFor="let feature of system.features" class="system-feature-item">
+              <span class="feature-check">✓</span>
+              <span>{{ feature }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========================================
+       SECTION 4: HOW IT WORKS
+       ======================================== -->
+  <section class="how-section" id="how-it-works">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">איך זה עובד?</h2>
+        <p class="section-subtitle">
+          3 שלבים פשוטים לאירוע מאורגן לחלוטין
+        </p>
+      </div>
+      
+      <div class="steps-container">
+        <div *ngFor="let step of steps; let i = index" class="step-card">
+          <div class="step-number">{{ step.number }}</div>
+          <div class="step-icon">{{ step.icon }}</div>
+          <h3 class="step-title">{{ step.title }}</h3>
+          <p class="step-description">{{ step.description }}</p>
+          <div *ngIf="i < steps.length - 1" class="step-connector">→</div>
+        </div>
+      </div>
+      
+      <div class="how-cta">
+        <button class="btn-primary btn-large" type="button" (click)="onCtaClick()">
+          מוכנים להתחיל?
+          <span class="btn-arrow">←</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========================================
+       SECTION 5: TRUST / TESTIMONIALS / CTA
+       ======================================== -->
+  <section class="trust-section" id="trust">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">למה זוגות בוחרים ב-Eivi?</h2>
+        <p class="section-subtitle">
+          הצטרפו לאלפי זוגות מרוצים שכבר חסכו שעות של עבודה
+        </p>
+      </div>
+      
+      <!-- Testimonials -->
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "Eivi חסכה לנו שעות של עבודה! המערכת שלחה את כל אישורי ההגעה אוטומטית 
+            ואפילו ארגנה לנו את סידורי ההושבה. מומלץ בחום!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">💑</div>
+            <div class="author-info">
+              <p class="author-name">דני ורונית</p>
+              <p class="author-location">תל אביב</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "הכי אהבנו את האוטומציה בוואטסאפ. האורחים קיבלו הודעות אישיות והכל היה 
+            מאורגן מראש. תודה Eivi!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">💑</div>
+            <div class="author-info">
+              <p class="author-name">יוסי ושירה</p>
+              <p class="author-location">ירושלים</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            "מערכת מדהימה! קל לשימוש, חוסכת זמן והכי חשוב - עובדת! ממליצים לכל 
+            זוג שמתחתן."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">💑</div>
+            <div class="author-info">
+              <p class="author-name">אלי ומיכל</p>
+              <p class="author-location">חיפה</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Final CTA -->
+      <div class="final-cta">
+        <div class="cta-box">
+          <h3 class="cta-title">מוכנים לחתונה ללא מתח?</h3>
+          <p class="cta-text">
+            הצטרפו ל-500+ זוגות מאושרים והתחילו לתכנן את האירוע בראש שקט
+          </p>
+          <button class="btn-primary btn-large" type="button" (click)="onCtaClick()">
+            התחילו עכשיו בחינם
+            <span class="btn-arrow">←</span>
+          </button>
+          <p class="cta-note">
+            ✓ ללא כרטיס אשראי • ✓ התחלה מהירה • ✓ תמיכה בעברית
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</main>
+
+<!-- Footer -->
+<app-footer></app-footer>

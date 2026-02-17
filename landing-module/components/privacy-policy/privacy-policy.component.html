@@ -1,0 +1,175 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Main Content -->
+<main class="legal-page">
+  
+  <!-- Hero Section -->
+  <section class="legal-hero">
+    <div class="section-container">
+      <h1 class="page-title">מדיניות פרטיות</h1>
+      <p class="page-subtitle">
+        עדכון אחרון: {{ lastUpdated }}
+      </p>
+    </div>
+  </section>
+  
+  <!-- Content Section -->
+  <section class="legal-content">
+    <div class="section-container">
+      <div class="content-wrapper">
+        
+        <!-- Introduction -->
+        <div class="legal-section">
+          <h2 class="section-heading">1. מבוא</h2>
+          <p class="section-text">
+            ברוכים הבאים למדיניות הפרטיות של <strong>{{ companyName }}</strong>. 
+            מדיניות זו מתארת כיצד אנו אוספים, משתמשים ומגנים על המידע האישי שלכם.
+          </p>
+          <p class="section-text">
+            {{ companyName }} הוא מותג המופעל על ידי <strong>{{ operatorName }}</strong>, 
+            עוסק מורשה מספר <strong>{{ licenseNumber }}</strong>.
+          </p>
+        </div>
+        
+        <!-- Data Collection -->
+        <div class="legal-section">
+          <h2 class="section-heading">2. איסוף מידע</h2>
+          <h3 class="subsection-heading">2.1 מידע שאתם מספקים</h3>
+          <p class="section-text">
+            אנו אוספים מידע שאתם מספקים לנו ישירות, כולל:
+          </p>
+          <ul class="section-list">
+            <li>שם מלא</li>
+            <li>כתובת דואר אלקטרוני</li>
+            <li>מספר טלפון</li>
+            <li>פרטי אירוע (תאריך, מקום)</li>
+            <li>רשימת אורחים</li>
+          </ul>
+          
+          <h3 class="subsection-heading">2.2 מידע שנאסף אוטומטית</h3>
+          <p class="section-text">
+            כאשר אתם משתמשים בשירות שלנו, אנו עשויים לאסוף מידע טכני כגון:
+          </p>
+          <ul class="section-list">
+            <li>כתובת IP</li>
+            <li>סוג דפדפן</li>
+            <li>מכשיר בו אתם משתמשים</li>
+            <li>דפים שביקרתם</li>
+            <li>זמן ותדירות השימוש</li>
+          </ul>
+        </div>
+        
+        <!-- Use of Data -->
+        <div class="legal-section">
+          <h2 class="section-heading">3. שימוש במידע</h2>
+          <p class="section-text">
+            אנו משתמשים במידע שאנו אוספים למטרות הבאות:
+          </p>
+          <ul class="section-list">
+            <li>מתן ושיפור השירותים שלנו</li>
+            <li>יצירת קשר עימכם בנוגע לשירות</li>
+            <li>שליחת הודעות ועדכונים</li>
+            <li>ניתוח ושיפור השירות</li>
+            <li>אבטחת המערכת ומניעת הונאות</li>
+            <li>עמידה בדרישות החוק</li>
+          </ul>
+        </div>
+        
+        <!-- Data Sharing -->
+        <div class="legal-section">
+          <h2 class="section-heading">4. שיתוף מידע</h2>
+          <p class="section-text">
+            אנו לא מוכרים את המידע האישי שלכם. אנו עשויים לשתף מידע במקרים הבאים:
+          </p>
+          <ul class="section-list">
+            <li><strong>ספקי שירות:</strong> חברות שמסייעות לנו לספק את השירות</li>
+            <li><strong>דרישה חוקית:</strong> כאשר הדבר נדרש על פי חוק</li>
+            <li><strong>הסכמתכם:</strong> כאשר אתם מאשרים שיתוף מידע</li>
+          </ul>
+        </div>
+        
+        <!-- Data Security -->
+        <div class="legal-section">
+          <h2 class="section-heading">5. אבטחת מידע</h2>
+          <p class="section-text">
+            אנו נוקטים באמצעי אבטחה סבירים כדי להגן על המידע שלכם, כולל:
+          </p>
+          <ul class="section-list">
+            <li>הצפנת נתונים (SSL/TLS)</li>
+            <li>שרתים מאובטחים</li>
+            <li>גישה מוגבלת למידע</li>
+            <li>גיבויים תקופתיים</li>
+          </ul>
+          <p class="section-text">
+            עם זאת, אנו לא יכולים להבטיח אבטחה מוחלטת באינטרנט.
+          </p>
+        </div>
+        
+        <!-- Your Rights -->
+        <div class="legal-section">
+          <h2 class="section-heading">6. הזכויות שלכם</h2>
+          <p class="section-text">
+            יש לכם את הזכויות הבאות לגבי המידע האישי שלכם:
+          </p>
+          <ul class="section-list">
+            <li><strong>זכות גישה:</strong> לצפות במידע שיש לנו עליכם</li>
+            <li><strong>זכות תיקון:</strong> לבקש תיקון מידע לא מדויק</li>
+            <li><strong>זכות מחיקה:</strong> לבקש מחיקת המידע שלכם</li>
+            <li><strong>זכות להתנגד:</strong> להתנגד לשימוש במידע שלכם</li>
+            <li><strong>זכות להעברה:</strong> לקבל את המידע שלכם בפורמט נגיש</li>
+          </ul>
+          <p class="section-text">
+            ליצירת קשר לגבי הזכויות שלכם: <a href="mailto:{{ contactEmail }}" class="email-link">{{ contactEmail }}</a>
+          </p>
+        </div>
+        
+        <!-- Cookies -->
+        <div class="legal-section">
+          <h2 class="section-heading">7. עוגיות (Cookies)</h2>
+          <p class="section-text">
+            אנו משתמשים בעוגיות כדי לשפר את חוויית המשתמש. עוגיות הן קבצים קטנים 
+            הנשמרים במכשיר שלכם. אתם יכולים לנהל את העוגיות דרך הגדרות הדפדפן שלכם.
+          </p>
+        </div>
+        
+        <!-- Children Privacy -->
+        <div class="legal-section">
+          <h2 class="section-heading">8. פרטיות ילדים</h2>
+          <p class="section-text">
+            השירות שלנו אינו מיועד לילדים מתחת לגיל 18. אנו לא אוספים במכוון 
+            מידע מילדים.
+          </p>
+        </div>
+        
+        <!-- Changes -->
+        <div class="legal-section">
+          <h2 class="section-heading">9. שינויים במדיניות</h2>
+          <p class="section-text">
+            אנו עשויים לעדכן מדיניות זו מעת לעת. שינויים מהותיים יפורסמו באתר 
+            ונודיע לכם במייל.
+          </p>
+        </div>
+        
+        <!-- Contact -->
+        <div class="legal-section">
+          <h2 class="section-heading">10. צור קשר</h2>
+          <p class="section-text">
+            לשאלות או הבהרות לגבי מדיניות הפרטיות, אנא צרו קשר:
+          </p>
+          <div class="contact-box">
+            <p><strong>{{ companyName }}</strong></p>
+            <p>מופעל על ידי: {{ operatorName }}</p>
+            <p>עוסק מורשה: {{ licenseNumber }}</p>
+            <p>אימייל: <a href="mailto:{{ contactEmail }}" class="email-link">{{ contactEmail }}</a></p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+</main>
+
+<!-- Footer -->
+<app-footer></app-footer>

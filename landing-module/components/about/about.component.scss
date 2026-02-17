@@ -1,0 +1,313 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.about-page {
+  direction: rtl;
+  padding-top: 70px;
+  
+  @include respond-to('md') {
+    padding-top: 80px;
+  }
+}
+
+.section-container {
+  @include container;
+}
+
+// Hero
+.about-hero {
+  @include section;
+  text-align: center;
+  background: $gradient-hero;
+  
+  .page-title {
+    @include heading-xl;
+    margin: 0 0 $spacing-md 0;
+  }
+  
+  .page-subtitle {
+    @include body-text;
+    font-size: $font-size-xl;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+// Story
+.story-section {
+  @include section;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-2xl;
+  align-items: center;
+  
+  @include respond-to('lg') {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.story-content {
+  .section-title {
+    @include heading-lg;
+    margin: 0 0 $spacing-lg 0;
+  }
+  
+  .story-text {
+    p {
+      @include body-text;
+      margin: 0 0 $spacing-md 0;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      strong {
+        color: $color-secondary;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+.story-image {
+  display: none;
+  
+  @include respond-to('lg') {
+    display: block;
+  }
+  
+  .image-placeholder {
+    @include card;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-lg;
+    background: $gradient-hero;
+    
+    .placeholder-icon {
+      font-size: 5rem;
+    }
+  }
+}
+
+// Values
+.values-section {
+  @include section;
+  @include section-alt;
+  
+  .section-title {
+    @include heading-lg;
+    text-align: center;
+    margin: 0 0 $spacing-3xl 0;
+  }
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+  
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to('lg') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.value-card {
+  @include card;
+  @include card-hover;
+  text-align: center;
+  
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: $spacing-md;
+  }
+  
+  .value-title {
+    @include heading-md;
+    margin: 0 0 $spacing-sm 0;
+  }
+  
+  .value-description {
+    @include body-text;
+    margin: 0;
+  }
+}
+
+// Mission
+.mission-section {
+  @include section;
+}
+
+.mission-box {
+  @include card;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-3xl;
+  text-align: center;
+  background: $gradient-hero;
+  border: 2px solid $color-secondary;
+  
+  .mission-title {
+    @include heading-lg;
+    margin: 0 0 $spacing-lg 0;
+  }
+  
+  .mission-text {
+    @include body-text;
+    font-size: $font-size-lg;
+    margin: 0 0 $spacing-md 0;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Timeline
+.timeline-section {
+  @include section;
+  @include section-alt;
+  
+  .section-title {
+    @include heading-lg;
+    text-align: center;
+    margin: 0 0 $spacing-3xl 0;
+  }
+}
+
+.timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: $color-secondary;
+    
+    @include respond-to('md') {
+      right: 80px;
+    }
+  }
+}
+
+.timeline-item {
+  display: flex;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-2xl;
+  position: relative;
+  
+  .timeline-year {
+    flex-shrink: 0;
+    width: 80px;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-secondary;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    @include card;
+    flex: 1;
+    
+    .timeline-event {
+      @include body-text;
+      margin: 0;
+    }
+  }
+}
+
+// Legal
+.legal-section {
+  @include section;
+}
+
+.legal-box {
+  @include card;
+  max-width: 700px;
+  margin: 0 auto;
+  
+  .section-title {
+    @include heading-lg;
+    text-align: center;
+    margin: 0 0 $spacing-lg 0;
+  }
+}
+
+.legal-info {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.legal-item {
+  @include body-text;
+  padding: $spacing-md;
+  background: $color-bg-light;
+  border-radius: $border-radius-md;
+  
+  strong {
+    color: $color-text-dark;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// CTA
+.cta-section {
+  @include section;
+  @include section-alt;
+}
+
+.cta-box {
+  @include card;
+  text-align: center;
+  padding: $spacing-3xl;
+  background: linear-gradient(135deg, rgba($color-secondary, 0.05) 0%, rgba($color-accent, 0.05) 100%);
+  border: 2px solid $color-secondary;
+  
+  .cta-title {
+    @include heading-lg;
+    margin: 0 0 $spacing-md 0;
+  }
+  
+  .cta-text {
+    @include body-text;
+    font-size: $font-size-xl;
+    margin: 0 0 $spacing-2xl 0;
+  }
+}
+
+.btn-primary {
+  @include button-primary;
+  padding: $spacing-md $spacing-2xl;
+  font-size: $font-size-xl;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  
+  .btn-arrow {
+    transition: transform $transition-fast;
+  }
+  
+  &:hover .btn-arrow {
+    transform: translateX(-4px);
+  }
+}
+
+.btn-large {
+  padding: $spacing-md $spacing-2xl;
+  font-size: $font-size-xl;
+}

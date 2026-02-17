@@ -1,0 +1,203 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Main Content -->
+<main class="contact-page">
+  
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="section-container">
+      <h1 class="page-title">צור קשר</h1>
+      <p class="page-subtitle">
+        יש לכם שאלה? רוצים לשמוע עוד? אנחנו כאן לעזור!
+      </p>
+    </div>
+  </section>
+  
+  <!-- Contact Methods -->
+  <section class="contact-methods-section">
+    <div class="section-container">
+      <div class="methods-grid">
+        <a 
+          *ngFor="let method of contactMethods" 
+          [href]="method.link"
+          class="method-card"
+          target="_blank"
+          rel="noopener noreferrer">
+          <div class="method-icon">{{ method.icon }}</div>
+          <h3 class="method-title">{{ method.title }}</h3>
+          <p class="method-value">{{ method.value }}</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Form -->
+  <section class="contact-form-section">
+    <div class="section-container">
+      <div class="form-grid">
+        
+        <!-- Form Content -->
+        <div class="form-column">
+          <h2 class="section-title">שלחו לנו הודעה</h2>
+          <p class="section-subtitle">
+            מלאו את הטופס ונחזור אליכם בהקדם האפשרי
+          </p>
+          
+          <!-- Success Message -->
+          <div *ngIf="submitSuccess" class="alert alert-success">
+            <span class="alert-icon">✅</span>
+            <div class="alert-content">
+              <strong>ההודעה נשלחה בהצלחה!</strong>
+              <p>נחזור אליכם בהקדם האפשרי.</p>
+            </div>
+          </div>
+          
+          <!-- Error Message -->
+          <div *ngIf="submitError" class="alert alert-error">
+            <span class="alert-icon">❌</span>
+            <div class="alert-content">
+              <strong>שגיאה בשליחת ההודעה</strong>
+              <p>אנא נסו שוב מאוחר יותר או צרו קשר במייל.</p>
+            </div>
+          </div>
+          
+          <!-- Form -->
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            
+            <!-- Name -->
+            <div class="form-group">
+              <label for="name" class="form-label">
+                שם מלא <span class="required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="name" 
+                formControlName="name"
+                class="form-input"
+                [class.error]="name?.invalid && name?.touched"
+                placeholder="הכניסו את שמכם המלא">
+              <div *ngIf="name?.invalid && name?.touched" class="form-error">
+                <span *ngIf="name?.errors?.['required']">שדה חובה</span>
+                <span *ngIf="name?.errors?.['minlength']">השם חייב להכיל לפחות 2 תווים</span>
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email" class="form-label">
+                אימייל <span class="required">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                formControlName="email"
+                class="form-input"
+                [class.error]="email?.invalid && email?.touched"
+                placeholder="example@email.com">
+              <div *ngIf="email?.invalid && email?.touched" class="form-error">
+                <span *ngIf="email?.errors?.['required']">שדה חובה</span>
+                <span *ngIf="email?.errors?.['email']">כתובת אימייל לא תקינה</span>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                טלפון (אופציונלי)
+              </label>
+              <input 
+                type="tel" 
+                id="phone" 
+                formControlName="phone"
+                class="form-input"
+                placeholder="050-1234567">
+            </div>
+            
+            <!-- Subject -->
+            <div class="form-group">
+              <label for="subject" class="form-label">
+                נושא <span class="required">*</span>
+              </label>
+              <select 
+                id="subject" 
+                formControlName="subject"
+                class="form-input"
+                [class.error]="subject?.invalid && subject?.touched">
+                <option value="">בחרו נושא</option>
+                <option value="general">שאלה כללית</option>
+                <option value="technical">תמיכה טכנית</option>
+                <option value="billing">שאלה לגבי מחירים</option>
+                <option value="feature">בקשה לתכונה חדשה</option>
+                <option value="other">אחר</option>
+              </select>
+              <div *ngIf="subject?.invalid && subject?.touched" class="form-error">
+                <span *ngIf="subject?.errors?.['required']">שדה חובה</span>
+              </div>
+            </div>
+            
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message" class="form-label">
+                הודעה <span class="required">*</span>
+              </label>
+              <textarea 
+                id="message" 
+                formControlName="message"
+                class="form-input form-textarea"
+                [class.error]="message?.invalid && message?.touched"
+                rows="5"
+                placeholder="כתבו את ההודעה שלכם כאן..."></textarea>
+              <div *ngIf="message?.invalid && message?.touched" class="form-error">
+                <span *ngIf="message?.errors?.['required']">שדה חובה</span>
+                <span *ngIf="message?.errors?.['minlength']">ההודעה חייבת להכיל לפחות 10 תווים</span>
+              </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <button 
+              type="submit" 
+              class="btn-primary btn-large"
+              [disabled]="isSubmitting">
+              <span *ngIf="!isSubmitting">שליחת הודעה</span>
+              <span *ngIf="isSubmitting">שולח...</span>
+            </button>
+            
+          </form>
+        </div>
+        
+        <!-- Info Column -->
+        <div class="info-column">
+          <div class="info-box">
+            <h3 class="info-title">שעות פעילות</h3>
+            <p class="info-text">
+              ראשון - חמישי: 09:00 - 18:00<br>
+              שישי: 09:00 - 14:00<br>
+              שבת: סגור
+            </p>
+          </div>
+          
+          <div class="info-box">
+            <h3 class="info-title">זמן מענה</h3>
+            <p class="info-text">
+              אנחנו משתדלים לענות לכל הפניות תוך 24 שעות בימי עסקים.
+            </p>
+          </div>
+          
+          <div class="info-box">
+            <h3 class="info-title">פרטים משפטיים</h3>
+            <p class="info-text">
+              <strong>מופעל על ידי:</strong> עומר חרוש<br>
+              <strong>עוסק מורשה:</strong> 308490994
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+</main>
+
+<!-- Footer -->
+<app-footer></app-footer>

@@ -1,0 +1,571 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.landing-home {
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+// =====================================
+// SECTION 1: HERO
+// =====================================
+.hero-section {
+  @include section;
+  background: $gradient-hero;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  
+  @include respond-to('md') {
+    padding-top: 120px;
+  }
+}
+
+.hero-container {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-2xl;
+  align-items: center;
+  
+  @include respond-to('lg') {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero-content {
+  @include flex-column;
+  gap: $spacing-lg;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: $spacing-xs $spacing-md;
+  background: rgba($color-secondary, 0.1);
+  border: 1px solid rgba($color-secondary, 0.3);
+  border-radius: $border-radius-full;
+  width: fit-content;
+  
+  .badge-icon {
+    font-size: $font-size-lg;
+  }
+  
+  .badge-text {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $color-text-dark;
+  }
+}
+
+.hero-title {
+  @include heading-xl;
+  margin: 0;
+  
+  @include respond-to('lg') {
+    font-size: 3.5rem;
+  }
+}
+
+.hero-subtitle {
+  @include body-text;
+  font-size: $font-size-xl;
+  color: $color-text-medium;
+  margin: 0;
+  
+  @include respond-to('md') {
+    font-size: $font-size-2xl;
+  }
+}
+
+.hero-cta {
+  display: flex;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+  margin-top: $spacing-md;
+}
+
+.btn-primary,
+.btn-secondary {
+  @include button-base;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  
+  .btn-arrow {
+    transition: transform $transition-fast;
+  }
+  
+  &:hover .btn-arrow {
+    transform: translateX(-4px);
+  }
+}
+
+.btn-primary {
+  background: $color-secondary;
+  color: $color-text-white;
+  padding: $spacing-md $spacing-xl;
+  font-size: $font-size-lg;
+  
+  &:hover {
+    background: darken($color-secondary, 10%);
+    transform: translateY(-2px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.btn-secondary {
+  background: $color-bg-white;
+  color: $color-text-dark;
+  border: 2px solid $color-border-medium;
+  padding: $spacing-md $spacing-xl;
+  font-size: $font-size-lg;
+  
+  &:hover {
+    border-color: $color-secondary;
+    background: rgba($color-secondary, 0.05);
+    transform: translateY(-2px);
+  }
+}
+
+.btn-large {
+  padding: $spacing-md $spacing-2xl;
+  font-size: $font-size-xl;
+}
+
+.hero-social-proof {
+  display: flex;
+  gap: $spacing-xl;
+  flex-wrap: wrap;
+  margin-top: $spacing-md;
+}
+
+.proof-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  
+  .proof-icon {
+    font-size: $font-size-2xl;
+  }
+  
+  .proof-text {
+    font-size: $font-size-sm;
+    color: $color-text-medium;
+    
+    strong {
+      color: $color-secondary;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.hero-image {
+  display: none;
+  
+  @include respond-to('lg') {
+    display: block;
+  }
+}
+
+.hero-image-placeholder {
+  background: linear-gradient(135deg, rgba($color-secondary, 0.2) 0%, rgba($color-accent, 0.2) 100%);
+  border-radius: $border-radius-xl;
+  padding: $spacing-3xl;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-decoration {
+  display: flex;
+  gap: $spacing-lg;
+  
+  .decoration-icon {
+    font-size: 5rem;
+    animation: float 3s ease-in-out infinite;
+    
+    &:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    
+    &:nth-child(3) {
+      animation-delay: 1s;
+    }
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+// =====================================
+// SECTION 2: PAIN POINT
+// =====================================
+.pain-section {
+  @include section;
+  @include section-alt;
+}
+
+.section-container {
+  @include container;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+}
+
+.section-title {
+  @include heading-lg;
+  margin: 0 0 $spacing-md 0;
+}
+
+.section-subtitle {
+  @include body-text;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-2xl;
+  
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pain-card {
+  @include card;
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  
+  .pain-icon {
+    font-size: 2.5rem;
+  }
+  
+  .pain-text {
+    @include body-text;
+    margin: 0;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.pain-conclusion {
+  text-align: center;
+  margin-top: $spacing-2xl;
+  
+  .conclusion-text {
+    @include body-text;
+    font-size: $font-size-xl;
+    margin: 0;
+    
+    strong {
+      color: $color-secondary;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+// =====================================
+// SECTION 3: FEATURES
+// =====================================
+.features-section {
+  @include section;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+  
+  @include respond-to('md') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card {
+  @include card;
+  @include card-hover;
+  text-align: center;
+  
+  .feature-icon {
+    font-size: 4rem;
+    margin-bottom: $spacing-md;
+  }
+  
+  .feature-title {
+    @include heading-md;
+    margin: 0 0 $spacing-md 0;
+  }
+  
+  .feature-description {
+    @include body-text;
+    margin: 0;
+  }
+}
+
+// =====================================
+// SECTION 3.5: SYSTEM FEATURES
+// =====================================
+.system-features-section {
+  @include section;
+  @include section-alt;
+}
+
+.system-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+  
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to('lg') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.system-card {
+  @include card;
+  @include card-hover;
+  
+  .system-header {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-md;
+    border-bottom: 2px solid $color-border-light;
+  }
+  
+  .system-icon {
+    font-size: 2.5rem;
+  }
+  
+  .system-title-group {
+    flex: 1;
+  }
+  
+  .system-title {
+    font-family: $font-family-primary;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-text-dark;
+    margin: 0 0 $spacing-xs 0;
+  }
+  
+  .system-subtitle {
+    font-size: $font-size-sm;
+    color: $color-text-medium;
+    margin: 0;
+  }
+  
+  .system-features-list {
+    @include reset-list;
+  }
+  
+  .system-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-base;
+    line-height: $line-height-relaxed;
+    color: $color-text-medium;
+    
+    .feature-check {
+      color: $color-accent;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+// =====================================
+// SECTION 4: HOW IT WORKS
+// =====================================
+.how-section {
+  @include section;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-2xl;
+  
+  @include respond-to('md') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step-card {
+  @include card;
+  position: relative;
+  text-align: center;
+  padding: $spacing-xl;
+  
+  .step-number {
+    position: absolute;
+    top: $spacing-md;
+    right: $spacing-md;
+    width: 40px;
+    height: 40px;
+    background: $color-secondary;
+    color: $color-text-white;
+    border-radius: $border-radius-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-lg;
+  }
+  
+  .step-icon {
+    font-size: 4rem;
+    margin-bottom: $spacing-md;
+  }
+  
+  .step-title {
+    @include heading-md;
+    margin: 0 0 $spacing-md 0;
+  }
+  
+  .step-description {
+    @include body-text;
+    margin: 0;
+  }
+  
+  .step-connector {
+    display: none;
+    
+    @include respond-to('md') {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -$spacing-xl;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: $color-secondary;
+    }
+  }
+}
+
+.how-cta {
+  text-align: center;
+  margin-top: $spacing-3xl;
+}
+
+// =====================================
+// SECTION 5: TRUST / TESTIMONIALS
+// =====================================
+.trust-section {
+  @include section;
+  @include section-alt;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-3xl;
+  
+  @include respond-to('md') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonial-card {
+  @include card;
+  @include card-hover;
+  
+  .testimonial-stars {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+  }
+  
+  .testimonial-text {
+    @include body-text;
+    font-style: italic;
+    margin: 0 0 $spacing-lg 0;
+    line-height: $line-height-relaxed;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+  }
+  
+  .author-avatar {
+    font-size: 2.5rem;
+  }
+  
+  .author-info {
+    .author-name {
+      font-weight: $font-weight-semibold;
+      color: $color-text-dark;
+      margin: 0;
+    }
+    
+    .author-location {
+      font-size: $font-size-sm;
+      color: $color-text-light;
+      margin: 0;
+    }
+  }
+}
+
+// Final CTA
+.final-cta {
+  margin-top: $spacing-3xl;
+}
+
+.cta-box {
+  @include card;
+  text-align: center;
+  padding: $spacing-3xl $spacing-lg;
+  background: linear-gradient(135deg, rgba($color-secondary, 0.05) 0%, rgba($color-accent, 0.05) 100%);
+  border: 2px solid $color-secondary;
+  
+  @include respond-to('md') {
+    padding: $spacing-3xl;
+  }
+  
+  .cta-title {
+    @include heading-lg;
+    margin: 0 0 $spacing-md 0;
+  }
+  
+  .cta-text {
+    @include body-text;
+    font-size: $font-size-xl;
+    max-width: 600px;
+    margin: 0 auto $spacing-2xl;
+  }
+  
+  .cta-note {
+    font-size: $font-size-sm;
+    color: $color-text-medium;
+    margin: $spacing-md 0 0;
+  }
+}
+
+// Accessibility
+button {
+  @include focus-visible;
+}

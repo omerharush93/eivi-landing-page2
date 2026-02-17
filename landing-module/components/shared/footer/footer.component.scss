@@ -1,0 +1,190 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.footer {
+  background: $color-text-dark;
+  color: $color-text-white;
+  padding: $spacing-3xl 0 $spacing-lg;
+  direction: rtl;
+  
+  @include respond-to('md') {
+    padding: $spacing-3xl 0 $spacing-xl;
+  }
+}
+
+.footer-container {
+  @include container;
+}
+
+// Grid Layout
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-2xl;
+  margin-bottom: $spacing-2xl;
+  
+  @include respond-to('md') {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: $spacing-xl;
+  }
+}
+
+.footer-section {
+  h4 {
+    margin-bottom: $spacing-md;
+  }
+}
+
+// Brand Section
+.footer-brand {
+  .footer-logo {
+    font-family: $font-family-primary;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-secondary;
+    margin-bottom: $spacing-sm;
+  }
+  
+  .footer-tagline {
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+    color: rgba($color-text-white, 0.7);
+    margin: 0;
+  }
+}
+
+// Headings
+.footer-heading {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+  margin: 0 0 $spacing-md 0;
+}
+
+// Links
+.footer-links {
+  @include reset-list;
+  
+  li {
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.footer-link {
+  color: rgba($color-text-white, 0.7);
+  text-decoration: none;
+  font-size: $font-size-sm;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+// Contact
+.footer-contact {
+  @include reset-list;
+  
+  li {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-sm;
+    color: rgba($color-text-white, 0.7);
+  }
+  
+  .contact-icon {
+    font-size: $font-size-lg;
+  }
+}
+
+// Social Links
+.social-links {
+  display: flex;
+  gap: $spacing-md;
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba($color-text-white, 0.1);
+    border-radius: $border-radius-md;
+    font-size: $font-size-xl;
+    text-decoration: none;
+    transition: all $transition-fast;
+    
+    &:hover {
+      background: $color-secondary;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Divider
+.footer-divider {
+  height: 1px;
+  background: rgba($color-text-white, 0.1);
+  margin: $spacing-2xl 0;
+}
+
+// Legal Footer (CRITICAL)
+.footer-legal {
+  text-align: center;
+  
+  .legal-text {
+    font-size: $font-size-sm;
+    color: rgba($color-text-white, 0.6);
+    margin: 0 0 $spacing-md 0;
+    line-height: $line-height-normal;
+    
+    // Make it stand out for Meta verification
+    font-weight: $font-weight-medium;
+    letter-spacing: 0.3px;
+  }
+  
+  .legal-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+  }
+  
+  .legal-link {
+    color: rgba($color-text-white, 0.5);
+    text-decoration: none;
+    font-size: $font-size-xs;
+    transition: color $transition-fast;
+    
+    &:hover {
+      color: $color-secondary;
+      text-decoration: underline;
+    }
+  }
+  
+  .legal-separator {
+    color: rgba($color-text-white, 0.3);
+  }
+}
+
+// Responsive
+@include respond-to('md') {
+  .footer-legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .legal-text {
+      margin: 0;
+      text-align: right;
+    }
+    
+    .legal-links {
+      justify-content: flex-end;
+    }
+  }
+}

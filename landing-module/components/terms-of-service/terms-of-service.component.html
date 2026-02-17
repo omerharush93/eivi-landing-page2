@@ -1,0 +1,199 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Main Content -->
+<main class="legal-page">
+  
+  <!-- Hero Section -->
+  <section class="legal-hero">
+    <div class="section-container">
+      <h1 class="page-title">תנאי שימוש</h1>
+      <p class="page-subtitle">
+        עדכון אחרון: {{ lastUpdated }}
+      </p>
+    </div>
+  </section>
+  
+  <!-- Content Section -->
+  <section class="legal-content">
+    <div class="section-container">
+      <div class="content-wrapper">
+        
+        <!-- Introduction -->
+        <div class="legal-section">
+          <h2 class="section-heading">1. מבוא וקבלת התנאים</h2>
+          <p class="section-text">
+            תנאי שימוש אלו ("התנאים") מסדירים את השימוש שלכם באתר <strong>{{ domain }}</strong> 
+            ובשירותים המוצעים על ידי <strong>{{ companyName }}</strong>.
+          </p>
+          <p class="section-text">
+            {{ companyName }} הוא מותג המופעל על ידי <strong>{{ operatorName }}</strong>, 
+            עוסק מורשה מספר <strong>{{ licenseNumber }}</strong>.
+          </p>
+          <p class="section-text">
+            שימוש באתר ובשירותים מהווה הסכמה מלאה לתנאים אלו. אם אינכם מסכימים, 
+            אנא הימנעו משימוש בשירות.
+          </p>
+        </div>
+        
+        <!-- Service Description -->
+        <div class="legal-section">
+          <h2 class="section-heading">2. תיאור השירות</h2>
+          <p class="section-text">
+            {{ companyName }} מספקת פלטפורמה מקוונת לניהול אישורי הגעה ותכנון אירועים, 
+            הכוללת:
+          </p>
+          <ul class="section-list">
+            <li>מערכת אוטומטית לשליחת אישורי הגעה בוואטסאפ</li>
+            <li>ניהול רשימת אורחים</li>
+            <li>כלי לתכנון סידורי הושבה</li>
+            <li>דשבורד לניהול משימות</li>
+            <li>כלים נוספים לתכנון אירועים</li>
+          </ul>
+        </div>
+        
+        <!-- User Registration -->
+        <div class="legal-section">
+          <h2 class="section-heading">3. הרשמה וחשבון משתמש</h2>
+          <h3 class="subsection-heading">3.1 יצירת חשבון</h3>
+          <p class="section-text">
+            כדי להשתמש בשירותים שלנו, עליכם:
+          </p>
+          <ul class="section-list">
+            <li>להיות בגיל 18 לפחות</li>
+            <li>לספק מידע מדויק ומעודכן</li>
+            <li>לשמור על סודיות פרטי הכניסה שלכם</li>
+            <li>להודיע לנו מיד על שימוש לא מורשה בחשבון</li>
+          </ul>
+          
+          <h3 class="subsection-heading">3.2 אחריות על החשבון</h3>
+          <p class="section-text">
+            אתם אחראים באופן מלא לכל פעילות המתבצעת תחת החשבון שלכם.
+          </p>
+        </div>
+        
+        <!-- User Obligations -->
+        <div class="legal-section">
+          <h2 class="section-heading">4. התחייבויות המשתמש</h2>
+          <p class="section-text">
+            בעת שימוש בשירות, אתם מתחייבים:
+          </p>
+          <ul class="section-list">
+            <li>לא להשתמש בשירות למטרות בלתי חוקיות</li>
+            <li>לא להעלות תוכן פוגעני, מעליב או לא הולם</li>
+            <li>לא לנסות לפרוץ או להזיק למערכת</li>
+            <li>לא להעתיק או לשכפל את השירות</li>
+            <li>לא להפיץ וירוסים או קוד מזיק</li>
+            <li>לכבד את זכויות הקניין הרוחני שלנו</li>
+          </ul>
+        </div>
+        
+        <!-- Pricing & Payment -->
+        <div class="legal-section">
+          <h2 class="section-heading">5. תמחור ותשלום</h2>
+          <h3 class="subsection-heading">5.1 מחירים</h3>
+          <p class="section-text">
+            המחירים מפורטים באתר ועשויים להשתנות מעת לעת. אנו נודיע על שינויים מראש.
+          </p>
+          
+          <h3 class="subsection-heading">5.2 תשלום</h3>
+          <p class="section-text">
+            התשלום מתבצע באמצעות מעבדי תשלום מאובטחים. אנו לא שומרים את פרטי האשראי שלכם.
+          </p>
+          
+          <h3 class="subsection-heading">5.3 החזרים</h3>
+          <p class="section-text">
+            מדיניות ההחזרים שלנו תלויה במסלול התמחור שבחרתם. לפרטים, צרו קשר.
+          </p>
+        </div>
+        
+        <!-- Intellectual Property -->
+        <div class="legal-section">
+          <h2 class="section-heading">6. קניין רוחני</h2>
+          <p class="section-text">
+            כל התוכן, העיצוב, הלוגו והקוד של {{ companyName }} הם רכוש של {{ operatorName }} 
+            ומוגנים בחוקי זכויות יוצרים.
+          </p>
+          <p class="section-text">
+            אסור להעתיק, לשכפל או להפיץ כל חלק מהשירות ללא אישור בכתב.
+          </p>
+        </div>
+        
+        <!-- Limitation of Liability -->
+        <div class="legal-section">
+          <h2 class="section-heading">7. הגבלת אחריות</h2>
+          <p class="section-text">
+            השירות ניתן "כמות שהוא" (AS-IS). אנו לא אחראים ל:
+          </p>
+          <ul class="section-list">
+            <li>נזקים ישירים או עקיפים הנובעים משימוש בשירות</li>
+            <li>אובדן מידע או נתונים</li>
+            <li>הפסקות בשירות או תקלות טכניות</li>
+            <li>טעויות או אי-דיוקים בתוכן</li>
+          </ul>
+        </div>
+        
+        <!-- Service Availability -->
+        <div class="legal-section">
+          <h2 class="section-heading">8. זמינות השירות</h2>
+          <p class="section-text">
+            אנו עושים מאמצים לשמור על השירות זמין 24/7, אך אנו עשויים להשבית את השירות 
+            לצורכי תחזוקה או שדרוגים.
+          </p>
+          <p class="section-text">
+            אנו שומרים את הזכות להפסיק או לשנות את השירות בכל עת.
+          </p>
+        </div>
+        
+        <!-- Termination -->
+        <div class="legal-section">
+          <h2 class="section-heading">9. סיום השימוש</h2>
+          <p class="section-text">
+            אתם רשאים לסגור את החשבון בכל עת דרך הגדרות החשבון.
+          </p>
+          <p class="section-text">
+            אנו רשאים להשעות או לסגור את החשבון שלכם בגין הפרת התנאים.
+          </p>
+        </div>
+        
+        <!-- Changes to Terms -->
+        <div class="legal-section">
+          <h2 class="section-heading">10. שינויים בתנאים</h2>
+          <p class="section-text">
+            אנו שומרים את הזכות לעדכן תנאים אלו. שינויים מהותיים יפורסמו באתר 
+            ונשלח אליכם הודעה במייל.
+          </p>
+        </div>
+        
+        <!-- Governing Law -->
+        <div class="legal-section">
+          <h2 class="section-heading">11. דין חל וסמכות שיפוט</h2>
+          <p class="section-text">
+            תנאים אלו כפופים לדיני מדינת ישראל. סמכות השיפוט הבלעדית נתונה 
+            לבתי המשפט במחוז תל אביב.
+          </p>
+        </div>
+        
+        <!-- Contact -->
+        <div class="legal-section">
+          <h2 class="section-heading">12. צור קשר</h2>
+          <p class="section-text">
+            לשאלות או הבהרות לגבי תנאי השימוש, אנא צרו קשר:
+          </p>
+          <div class="contact-box">
+            <p><strong>{{ companyName }}</strong></p>
+            <p>מופעל על ידי: {{ operatorName }}</p>
+            <p>עוסק מורשה: {{ licenseNumber }}</p>
+            <p>אימייל: <a href="mailto:{{ contactEmail }}" class="email-link">{{ contactEmail }}</a></p>
+            <p>דומיין: {{ domain }}</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+</main>
+
+<!-- Footer -->
+<app-footer></app-footer>

@@ -1,0 +1,81 @@
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Main Footer Content -->
+    <div class="footer-grid">
+      
+      <!-- Brand Section -->
+      <div class="footer-section footer-brand">
+        <h3 class="footer-logo">Eivi</h3>
+        <p class="footer-tagline">
+          אישורי הגעה בראש שקט<br>
+          הבינה המלאכותית שתארגן לכם את החתונה
+        </p>
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class="footer-section">
+        <h4 class="footer-heading">ניווט</h4>
+        <ul class="footer-links">
+          <li *ngFor="let link of navigationLinks">
+            <a 
+              [routerLink]="link.route" 
+              class="footer-link"
+              [attr.aria-label]="link.label">
+              {{ link.label }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Contact Section -->
+      <div class="footer-section">
+        <h4 class="footer-heading">צור קשר</h4>
+        <ul class="footer-contact">
+          <li>
+            <span class="contact-icon">📧</span>
+            <a href="mailto:info@eivi.co.il" class="footer-link">info@eivi.co.il</a>
+          </li>
+          <li>
+            <span class="contact-icon">🌐</span>
+            <span>eivi.co.il</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Social Links (Optional) -->
+      <div class="footer-section">
+        <h4 class="footer-heading">עקבו אחרינו</h4>
+        <div class="social-links">
+          <a 
+            *ngFor="let social of socialLinks"
+            [href]="social.url"
+            [attr.aria-label]="social.label"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer">
+            {{ social.icon }}
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Divider -->
+    <div class="footer-divider"></div>
+    
+    <!-- Legal Footer (CRITICAL FOR META VERIFICATION) -->
+    <div class="footer-legal">
+      <p class="legal-text">
+        Eivi is a brand operated by Omer Harush, Licensed Dealer Number 308490994. All rights reserved {{ currentYear }}.
+      </p>
+      <div class="legal-links">
+        <a routerLink="/landing/privacy" class="legal-link">Privacy Policy</a>
+        <span class="legal-separator">•</span>
+        <a routerLink="/landing/terms" class="legal-link">Terms of Service</a>
+        <span class="legal-separator">•</span>
+        <a routerLink="/landing/contact" class="legal-link">Contact</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
