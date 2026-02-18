@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eivi - אישורי הגעה בראש שקט</title>
+  <meta name="description" content="Eivi - מערכת אוטומציה מבוססת בינה מלאכותית לניהול אישורי הגעה ותכנון אירועים בוואטסאפ. חסכו שעות של עבודה ולחץ.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo-link">
+        <span class="logo-text">Eivi</span>
+        <span class="logo-tagline">אישורי הגעה בראש שקט</span>
+      </a>
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link active">דף הבית</a></li>
+          <li><a href="/about" class="nav-link">אודות</a></li>
+          <li><a href="/contact" class="nav-link">צור קשר</a></li>
+          <li><a href="/privacy" class="nav-link">פרטיות</a></li>
+          <li><a href="/terms" class="nav-link">תנאי שימוש</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="/contact" class="btn-primary">התחל עכשיו</a>
+      </div>
+      <button class="mobile-toggle" aria-label="פתח תפריט" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="/" class="nav-link active">דף הבית</a>
+    <a href="/about" class="nav-link">אודות</a>
+    <a href="/contact" class="nav-link">צור קשר</a>
+    <a href="/privacy" class="nav-link">פרטיות</a>
+    <a href="/terms" class="nav-link">תנאי שימוש</a>
+    <a href="/contact" class="btn-primary">התחל עכשיו</a>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>✨</span>
+            <span>בינה מלאכותית לניהול אירועים</span>
+          </div>
+          <h1 class="hero-title">Eivi - אישורי הגעה בראש שקט</h1>
+          <p class="hero-subtitle">הבינה המלאכותית שתארגן לכם את החתונה</p>
+          <div class="hero-cta">
+            <a href="/contact" class="btn-primary btn-large">התחל עכשיו <span>←</span></a>
+            <a href="#how-it-works" class="btn-secondary btn-large">איך זה עובד?</a>
+          </div>
+          <div class="social-proof">
+            <div class="proof-item">
+              <span class="proof-icon">💍</span>
+              <span class="proof-text"><strong>500+</strong> זוגות מאושרים</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-icon">⭐</span>
+              <span class="proof-text"><strong>4.9/5</strong> דירוג ממוצע</span>
+            </div>
+            <div class="proof-item">
+              <span class="proof-icon">📱</span>
+              <span class="proof-text"><strong>10,000+</strong> אישורי הגעה</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-decoration">
+            <span>💐</span>
+            <span>💒</span>
+            <span>🎊</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: PAIN POINT -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">מכירים את התחושה?</h2>
+        <p class="section-subtitle">תכנון חתונה יכול להיות מלחיץ, במיוחד כשמדובר באישורי הגעה וסידורי הושבה</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">😰</div>
+          <p class="pain-text">מרדף אחרי אורחים לאישור הגעה?</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">😰</div>
+          <p class="pain-text">בלבול עם מספרי אורחים?</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">😰</div>
+          <p class="pain-text">קושי בניהול סידורי הושבה?</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">😰</div>
+          <p class="pain-text">לחץ לפני האירוע?</p>
+        </div>
+      </div>
+      <div class="pain-conclusion">
+        <strong>הפתרון?</strong> תנו ל-Eivi לטפל בזה בשבילכם!
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAIN FEATURES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">איך Eivi פותרת את הבעיה?</h2>
+        <p class="section-subtitle">שלוש יכולות מרכזיות שיחסכו לכם שעות של עבודה ולחץ</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3 class="feature-title">אוטומציה בוואטסאפ</h3>
+          <p class="feature-desc">Eivi שולחת אישורי הגעה אוטומטיים בוואטסאפ, עוקבת אחרי תשובות ומזכירה לאורחים שלא השיבו</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title">דשבורד בזמן אמת</h3>
+          <p class="feature-desc">עקבו אחרי כל אישור הגעה בזמן אמת, ראו כמה אורחים מגיעים ותכננו בהתאם</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🪑</div>
+          <h3 class="feature-title">סידורי הושבה חכמים</h3>
+          <p class="feature-desc">האלגוריתם שלנו מארגן את סידורי ההושבה בצורה אוטומטית לפי קבוצות וקשרים משפחתיים</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3.5: EXTENDED SYSTEM FEATURES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">הפונקציונליות המלאה של המערכת</h2>
+        <p class="section-subtitle">כלים מקצועיים לניהול מושלם של האירוע שלכם</p>
+      </div>
+      <div class="system-grid">
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon">🏠</div>
+            <div>
+              <div class="system-card-title">דף הבית</div>
+              <div class="system-card-sub">מרכז הבקרה שלכם</div>
+            </div>
+          </div>
+          <ul class="system-features-list">
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>סטטיסטיקות כלליות של האירוע</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>תצוגה מהירה של אישורי הגעה</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>ניהול משימות דחופות</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>התראות ועדכונים בזמן אמת</span></li>
+          </ul>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon">🪑</div>
+            <div>
+              <div class="system-card-title">סידורי הושבה</div>
+              <div class="system-card-sub">אלגוריתם חכם לסידור מושלם</div>
+            </div>
+          </div>
+          <ul class="system-features-list">
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>יצירת שולחנות וניהול מקומות</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>הצעות אוטומטיות לסידור</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>גרירה ושחרור למיקום ידני</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>ייצוא ל-PDF או Excel</span></li>
+          </ul>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon">👥</div>
+            <div>
+              <div class="system-card-title">ניהול מוזמנים</div>
+              <div class="system-card-sub">כל האורחים במקום אחד</div>
+            </div>
+          </div>
+          <ul class="system-features-list">
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>רשימת אורחים מלאה עם פילטרים</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>ייבוא מאקסל בקליק</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>מעקב אחר סטטוס כל אורח</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>שליחת הודעות אישיות</span></li>
+          </ul>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon">✅</div>
+            <div>
+              <div class="system-card-title">משימות</div>
+              <div class="system-card-sub">תכנון מסודר של האירוע</div>
+            </div>
+          </div>
+          <ul class="system-features-list">
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>רשימת משימות עם תאריכי יעד</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>קביעת עדיפויות</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>התראות לפני מועד</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>שיתוף משימות עם בן/בת הזוג</span></li>
+          </ul>
+        </div>
+
+        <div class="system-card">
+          <div class="system-card-header">
+            <div class="system-icon">⚙️</div>
+            <div>
+              <div class="system-card-title">הגדרות אירוע</div>
+              <div class="system-card-sub">התאמה אישית מלאה</div>
+            </div>
+          </div>
+          <ul class="system-features-list">
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>פרטי האירוע (תאריך, מקום, שעה)</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>הוספת שותפים לניהול</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>התאמת הודעות אוטומטיות</span></li>
+            <li class="system-feature-item"><span class="feature-check">✓</span><span>העדפות תצוגה ושפה</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: HOW IT WORKS -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">איך זה עובד?</h2>
+        <p class="section-subtitle">3 שלבים פשוטים לאירוע מאורגן לחלוטין</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">📝</div>
+          <h3 class="step-title">הרשמה</h3>
+          <p class="step-desc">צרו חשבון ב-30 שניות עם Google או אימייל</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">📋</div>
+          <h3 class="step-title">העלאת רשימת אורחים</h3>
+          <p class="step-desc">ייבאו רשימת אורחים מאקסל או הוסיפו ידנית</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">✨</div>
+          <h3 class="step-title">Eivi עושה את השאר</h3>
+          <p class="step-desc">המערכת שולחת הודעות, עוקבת אחרי תשובות ומארגנת את ההושבה</p>
+        </div>
+      </div>
+      <div class="how-cta">
+        <a href="/contact" class="btn-primary btn-large">מוכנים להתחיל? <span>←</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: TRUST / TESTIMONIALS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">למה זוגות בוחרים ב-Eivi?</h2>
+        <p class="section-subtitle">הצטרפו לאלפי זוגות מרוצים שכבר חסכו שעות של עבודה</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Eivi חסכה לנו שעות של עבודה! המערכת שלחה את כל אישורי ההגעה אוטומטית ואפילו ארגנה לנו את סידורי ההושבה. מומלץ בחום!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">💑</div>
+            <div>
+              <p class="author-name">דני ורונית</p>
+              <p class="author-location">תל אביב</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"הכי אהבנו את האוטומציה בוואטסאפ. האורחים קיבלו הודעות אישיות והכל היה מאורגן מראש. תודה Eivi!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">💑</div>
+            <div>
+              <p class="author-name">יוסי ושירה</p>
+              <p class="author-location">ירושלים</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"מערכת מדהימה! קל לשימוש, חוסכת זמן והכי חשוב - עובדת! ממליצים לכל זוג שמתחתן."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">💑</div>
+            <div>
+              <p class="author-name">אלי ומיכל</p>
+              <p class="author-location">חיפה</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta-box mt-3">
+        <h3 class="cta-title">מוכנים לחתונה ללא מתח?</h3>
+        <p class="cta-text">הצטרפו ל-500+ זוגות מאושרים והתחילו לתכנן את האירוע בראש שקט</p>
+        <a href="/contact" class="btn-primary btn-large">התחילו עכשיו בחינם <span>←</span></a>
+        <p class="cta-note">✓ ללא כרטיס אשראי &nbsp;•&nbsp; ✓ התחלה מהירה &nbsp;•&nbsp; ✓ תמיכה בעברית</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Eivi</div>
+        <p class="footer-tagline">אישורי הגעה בראש שקט<br>הבינה המלאכותית שתארגן לכם את החתונה</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">ניווט</h4>
+        <ul class="footer-links">
+          <li><a href="/" class="footer-link">דף הבית</a></li>
+          <li><a href="/about" class="footer-link">אודות</a></li>
+          <li><a href="/contact" class="footer-link">צור קשר</a></li>
+          <li><a href="/privacy" class="footer-link">מדיניות פרטיות</a></li>
+          <li><a href="/terms" class="footer-link">תנאי שימוש</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">צור קשר</h4>
+        <ul class="footer-contact">
+          <li><span class="contact-icon">📧</span><a href="mailto:info@eivi.co.il" class="footer-link">info@eivi.co.il</a></li>
+          <li><span class="contact-icon">🌐</span><span>eivi.co.il</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">עקבו אחרינו</h4>
+        <div class="social-links">
+          <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">📘</a>
+          <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p class="legal-text">Eivi is a brand operated by Omer Harush, Licensed Dealer Number 308490994. All rights reserved 2026.</p>
+      <div class="legal-links">
+        <a href="/privacy" class="legal-link">Privacy Policy</a>
+        <span class="legal-sep">•</span>
+        <a href="/terms" class="legal-link">Terms of Service</a>
+        <span class="legal-sep">•</span>
+        <a href="/contact" class="legal-link">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById('mobile-nav');
+    nav.classList.toggle('open');
+  }
+  window.addEventListener('scroll', function () {
+    var header = document.getElementById('site-header');
+    if (window.scrollY > 20) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+</script>
+</body>
+</html>

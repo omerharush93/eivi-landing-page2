@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>צור קשר - Eivi</title>
+  <meta name="description" content="צרו קשר עם Eivi. יש לכם שאלה? רוצים לשמוע עוד? אנחנו כאן לעזור. אימייל: info@eivi.co.il">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo-link">
+        <span class="logo-text">Eivi</span>
+        <span class="logo-tagline">אישורי הגעה בראש שקט</span>
+      </a>
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">דף הבית</a></li>
+          <li><a href="/about" class="nav-link">אודות</a></li>
+          <li><a href="/contact" class="nav-link active">צור קשר</a></li>
+          <li><a href="/privacy" class="nav-link">פרטיות</a></li>
+          <li><a href="/terms" class="nav-link">תנאי שימוש</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="/contact" class="btn-primary">התחל עכשיו</a>
+      </div>
+      <button class="mobile-toggle" aria-label="פתח תפריט" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="/" class="nav-link">דף הבית</a>
+    <a href="/about" class="nav-link">אודות</a>
+    <a href="/contact" class="nav-link active">צור קשר</a>
+    <a href="/privacy" class="nav-link">פרטיות</a>
+    <a href="/terms" class="nav-link">תנאי שימוש</a>
+    <a href="/contact" class="btn-primary">התחל עכשיו</a>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-title">צור קשר</h1>
+      <p class="page-subtitle">יש לכם שאלה? רוצים לשמוע עוד? אנחנו כאן לעזור!</p>
+    </div>
+  </section>
+
+  <!-- CONTACT METHODS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="methods-grid">
+        <a href="mailto:info@eivi.co.il" class="method-card">
+          <div class="method-icon">📧</div>
+          <h3 class="method-title">אימייל</h3>
+          <p class="method-value">info@eivi.co.il</p>
+        </a>
+        <a href="https://eivi.co.il" class="method-card" target="_blank" rel="noopener">
+          <div class="method-icon">🌐</div>
+          <h3 class="method-title">אתר</h3>
+          <p class="method-value">eivi.co.il</p>
+        </a>
+        <a href="https://wa.me/972" class="method-card" target="_blank" rel="noopener">
+          <div class="method-icon">📱</div>
+          <h3 class="method-title">וואטסאפ</h3>
+          <p class="method-value">שלחו לנו הודעה</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Form -->
+        <div>
+          <h2 class="form-title">שלחו לנו הודעה</h2>
+          <p class="form-subtitle">מלאו את הטופס ונחזור אליכם בהקדם האפשרי</p>
+
+          <div id="success-msg" class="alert alert-success" style="display:none;">
+            <span class="alert-icon">✅</span>
+            <div class="alert-content">
+              <strong>ההודעה נשלחה בהצלחה!</strong>
+              <p>נחזור אליכם בהקדם האפשרי.</p>
+            </div>
+          </div>
+          <div id="error-msg" class="alert alert-error" style="display:none;">
+            <span class="alert-icon">❌</span>
+            <div class="alert-content">
+              <strong>שגיאה בשליחת ההודעה</strong>
+              <p>אנא נסו שוב מאוחר יותר או צרו קשר במייל.</p>
+            </div>
+          </div>
+
+          <form id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">שם מלא <span class="required">*</span></label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="הכניסו את שמכם המלא" required minlength="2">
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">אימייל <span class="required">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">טלפון (אופציונלי)</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="050-1234567">
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">נושא <span class="required">*</span></label>
+              <select id="subject" name="subject" class="form-input" required>
+                <option value="">בחרו נושא</option>
+                <option value="general">שאלה כללית</option>
+                <option value="technical">תמיכה טכנית</option>
+                <option value="billing">שאלה לגבי מחירים</option>
+                <option value="feature">בקשה לתכונה חדשה</option>
+                <option value="other">אחר</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">הודעה <span class="required">*</span></label>
+              <textarea id="message" name="message" class="form-input" rows="5" placeholder="כתבו את ההודעה שלכם כאן..." required minlength="10"></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-large" id="submit-btn">שליחת הודעה</button>
+          </form>
+        </div>
+
+        <!-- Info Sidebar -->
+        <div class="info-sidebar">
+          <div class="info-box">
+            <h3 class="info-box-title">שעות פעילות</h3>
+            <p class="info-box-text">
+              ראשון - חמישי: 09:00 - 18:00<br>
+              שישי: 09:00 - 14:00<br>
+              שבת: סגור
+            </p>
+          </div>
+          <div class="info-box">
+            <h3 class="info-box-title">זמן מענה</h3>
+            <p class="info-box-text">אנחנו משתדלים לענות לכל הפניות תוך 24 שעות בימי עסקים.</p>
+          </div>
+          <div class="info-box">
+            <h3 class="info-box-title">פרטים משפטיים</h3>
+            <p class="info-box-text">
+              <strong>מופעל על ידי:</strong> עומר חרוש<br>
+              <strong>עוסק מורשה:</strong> 308490994
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Eivi</div>
+        <p class="footer-tagline">אישורי הגעה בראש שקט<br>הבינה המלאכותית שתארגן לכם את החתונה</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">ניווט</h4>
+        <ul class="footer-links">
+          <li><a href="/" class="footer-link">דף הבית</a></li>
+          <li><a href="/about" class="footer-link">אודות</a></li>
+          <li><a href="/contact" class="footer-link">צור קשר</a></li>
+          <li><a href="/privacy" class="footer-link">מדיניות פרטיות</a></li>
+          <li><a href="/terms" class="footer-link">תנאי שימוש</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">צור קשר</h4>
+        <ul class="footer-contact">
+          <li><span class="contact-icon">📧</span><a href="mailto:info@eivi.co.il" class="footer-link">info@eivi.co.il</a></li>
+          <li><span class="contact-icon">🌐</span><span>eivi.co.il</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">עקבו אחרינו</h4>
+        <div class="social-links">
+          <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">📘</a>
+          <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p class="legal-text">Eivi is a brand operated by Omer Harush, Licensed Dealer Number 308490994. All rights reserved 2026.</p>
+      <div class="legal-links">
+        <a href="/privacy" class="legal-link">Privacy Policy</a>
+        <span class="legal-sep">•</span>
+        <a href="/terms" class="legal-link">Terms of Service</a>
+        <span class="legal-sep">•</span>
+        <a href="/contact" class="legal-link">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobile-nav').classList.toggle('open');
+  }
+  window.addEventListener('scroll', function () {
+    document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  function handleSubmit(e) {
+    e.preventDefault();
+    var form = document.getElementById('contact-form');
+    var btn = document.getElementById('submit-btn');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    btn.disabled = true;
+    btn.textContent = 'שולח...';
+    setTimeout(function () {
+      document.getElementById('success-msg').style.display = 'flex';
+      form.reset();
+      btn.disabled = false;
+      btn.textContent = 'שליחת הודעה';
+      setTimeout(function () { document.getElementById('success-msg').style.display = 'none'; }, 5000);
+    }, 1200);
+  }
+</script>
+</body>
+</html>
