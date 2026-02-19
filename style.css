@@ -615,6 +615,12 @@ select.form-input { cursor: pointer; }
 }
 .contact-box-legal strong { color: var(--text-dark); }
 
+/* ---- Footer Legal Details Block ---- */
+.legal-details-block { margin-bottom: 1.25rem; font-size: 0.8rem; color: #bbb; line-height: 2.1; text-align: center; }
+.legal-details-title { font-weight: 700; color: #ddd; margin-bottom: 0.25rem; font-size: 0.85rem; }
+.legal-details-block .legal-link { color: #ccc; }
+.legal-details-block .legal-link:hover { color: var(--gold); }
+
 /* ---- Utilities ---- */
 .text-center { text-align: center; }
 .mt-1 { margin-top: 1rem; }
